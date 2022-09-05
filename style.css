@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('./fonts/roboto-regular.ttf') format('truetype');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('./fonts/roboto-medium.ttf') format('truetype');
+	font-weight: 500;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Roboto';
+	font-weight: normal;
+}
+
+main {
+	height: 100vh;
+	padding: 4rem 1rem;
+	background-color: #ebeef5;
+}
+
+table {
+	width: 60%;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	border-collapse: collapse;
+	box-shadow: 0 6px 15px #ddd;
+}
+
+table thead tr {
+	background-color: #fff;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #f4f3f9;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #fff;
+}
+
+th {
+	text-align: left;
+	color: #512da7;
+	padding: 1.5rem 2rem;
+}
+
+td {
+	padding: 1rem 2rem;
+}
+
+.arrow-container {
+	display: flex;
+	align-items: center;
+}
+
+.arrow-top {
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #d6d6d6;
+	margin-left: 0.75rem;
+   cursor: pointer;
+}
+
+.user-container {
+	display: flex;
+	align-items: center;
+}
+
+td .avatar-container {
+	background-color: rgba(10, 10, 10, 0.5);
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 1rem;
+	position: relative;
+}
+
+td .avatar-container .avatar {
+	width: 100%;
+	height: 100%;
+}
+
+td .avatar-container .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(10, 10, 10, 0.5);
+}
+
+td .avatar-container .overlay::after {
+	content: attr(data-char);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.paginate-container {
+	display: flex;
+	justify-content: center;
+	padding: 3rem 1rem;
+}
+
+.paginate {
+	display: flex;
+	justify-content: center;
+	gap: .75rem;
+}
+
+.page-link {
+	padding: 0.75rem 1rem;
+	background-color: #fff;
+	border-radius: 6px;
+	color: #43484c;
+	user-select: none;
+	box-shadow: 0 3px 6px #ccc;
+	font-weight: 500;
+}
+
+.page-link.active {
+	background-color: #512ea6;
+	color: #fff;
+}
